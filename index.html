@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Geo BA</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin=""
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game">
+
+        <section id="start-screen" class="screen active">
+            <p class="eyebrow">GEO BA</p>
+
+            <h1>Geotruchosrr</h1>
+
+            <p class="description">
+                Ciudades y barrios de Buenos Aires (ciudad y provincia)
+            </p>
+
+            <button id="start-button" class="main-button">
+                JUGAR
+            </button>
+        </section>
+
+
+        <section id="game-screen" class="screen">
+
+            <div class="top-bar">
+                <span id="round-text">Ronda 1 de ?</span>
+                <span id="score-text">0 puntos</span>
+            </div>
+
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <div class="photo-container">
+                <img id="location-image" src="" alt="Foto del lugar">
+            </div>
+
+            <h2>¿Dónde se sacó esta foto?</h2>
+
+            <p class="instruction">
+                Tocá el mapa donde creés que está el lugar.
+            </p>
+
+            <div id="map"></div>
+
+            <button id="confirm-button" class="main-button" disabled>
+                CONFIRMAR
+            </button>
+
+            <div id="round-result" class="round-result hidden">
+                <h3 id="result-title">Resultado</h3>
+                <p id="result-text"></p>
+
+                <button id="next-button" class="main-button">
+                    SIGUIENTE
+                </button>
+            </div>
+
+        </section>
+
+
+        <section id="result-screen" class="screen">
+
+            <p class="eyebrow">RESULTADO FINAL</p>
+
+            <h1 id="final-title">Apa</h1>
+
+            <div class="final-score">
+                <span id="final-score">0</span>
+                <small>puntos</small>
+            </div>
+
+            <p id="final-message" class="description"></p>
+
+            <button id="restart-button" class="main-button">
+                JUGAR DE NUEVO
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        crossorigin="">
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
